@@ -1,5 +1,4 @@
 import clsx from "clsx";
-import React from "react";
 import styles from "./landing.module.scss";
 
 type SocialItemTypes = {
@@ -26,9 +25,16 @@ const socials: Array<SocialItemTypes> = [
 ];
 
 const ForeWord = () => {
+  const handleScrollDown = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className={clsx("flex w-full h-full min-h-screen", styles.bgMain)}>
-      <div className="flex max-w-screen-main w-full mx-auto flex-col pt-16">
+      <div className="flex w-full mx-auto flex-col pt-16">
         <div className="px-[120px] flex-1 flex flex-col pb-14">
           <img src="/images/logo-text.svg" alt="" className="h-4 w-fit" />
           <span className="text-12/16 mt-3">
@@ -46,7 +52,10 @@ const ForeWord = () => {
 
           <div className="flex justify-between items-end">
             <div className="flex items-center">
-              <div className="relative w-20">
+              <div
+                className="relative w-20 cursor-pointer"
+                onClick={handleScrollDown}
+              >
                 <img
                   src="/images/bg-scroll-explore.svg"
                   alt=""

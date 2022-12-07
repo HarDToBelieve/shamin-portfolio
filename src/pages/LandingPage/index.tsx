@@ -1,4 +1,3 @@
-import React from "react";
 import ForeWord from "./ForeWord";
 
 const LandingPage = () => {
