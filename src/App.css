@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
-}
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import url(./styles/swiper.css);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+  font-family: "CASpotnik";
+  src: url(../public/fonts/CASpotnik-Regular.otf) format("woff"),
+    url(../public/fonts/CASpotnik-Regular.otf) format("woff2"),
+    url(../public/fonts/CASpotnik-Regular.otf) format("truetype"),
+    url(../public/fonts/CASpotnik-Regular.otf) format("svg"),
+    url(../public/fonts/CASpotnik-Regular.otf) format("embedded-opentype");
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+  font-family: "CASpotnik Medium";
+  src: url(../public/fonts/CASpotnik-Medium.otf) format("woff"),
+    url(../public/fonts/CASpotnik-Medium.otf) format("woff2"),
+    url(../public/fonts/CASpotnik-Medium.otf) format("truetype"),
+    url(../public/fonts/CASpotnik-Medium.otf) format("svg"),
+    url(../public/fonts/CASpotnik-Medium.otf) format("embedded-opentype");
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: "CASpotnik Bold";
+  src: url(../public/fonts/CASpotnik-ExtraBold.otf) format("woff"),
+    url(../public/fonts/CASpotnik-ExtraBold.otf) format("woff2"),
+    url(../public/fonts/CASpotnik-ExtraBold.otf) format("truetype"),
+    url(../public/fonts/CASpotnik-ExtraBold.otf) format("svg"),
+    url(../public/fonts/CASpotnik-ExtraBold.otf) format("embedded-opentype");
 }

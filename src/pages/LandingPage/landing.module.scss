@@ -1,0 +1,15 @@
+.bgMain {
+  // background: url(/assets/bg-foreword.png) center center no-repeat;
+  background-size: auto 100%;
+}
+
+.bgBtnScroll {
+  animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+  }
+}
