@@ -1,4 +1,5 @@
 import clsx from "clsx";
+import { SEND_GMAIL_URL } from "../../utils";
 import styles from "./landing.module.scss";
 
 type SocialItemTypes = {
@@ -113,7 +114,7 @@ const ForeWord = () => {
             <p className="text-14/18 m-0">
               Feel free to say{" "}
               <a
-                href="https://mail.google.com/mail/u/0/?fs=1&to=kieuyen1305@gmail.com&tf=cm"
+                href={SEND_GMAIL_URL}
                 target={"_blank"}
                 rel="noreferrer"
                 className="text-[#001AFF] font-semibold"
