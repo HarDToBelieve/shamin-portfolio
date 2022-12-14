@@ -48,7 +48,7 @@ const Footer = () => {
                 href={item?.to}
                 target={item?.target ?? "_self"}
                 rel="noreferrer"
-                className="uppercase text-14/18 mt-7"
+                className="uppercase text-14/18 mt-7 hover:underline"
               >
                 {item?.label}
               </a>
