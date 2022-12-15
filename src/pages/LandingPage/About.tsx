@@ -35,7 +35,7 @@ const About = () => {
                       href={item.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-26/32 font-cas font-bold hover:underline"
+                      className="text-26/32 font-cas font-bold hover:text-main"
                     >
                       {item.company}
                     </a>
@@ -52,7 +52,7 @@ const About = () => {
                     href="https://www.arena-multimedia.vn/"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-26/32 font-cas font-bold hover:underline"
+                    className="text-26/32 font-cas font-bold hover:text-main"
                   >
                     Arena Multimedia
                   </a>

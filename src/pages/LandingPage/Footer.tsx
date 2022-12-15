@@ -35,7 +35,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between mt-32 pl-8">
-        <div className="flex items-end text-14/18">© 2022</div>
+        <div className="flex items-end text-14/18">© 2023</div>
         <div className="flex ml-auto flex-col items-end">
           <img src="/images/logo-text.svg" alt="" className="h-4 w-fit" />
           <span className="text-12/16 mt-3">
@@ -48,7 +48,7 @@ const Footer = () => {
                 href={item?.to}
                 target={item?.target ?? "_self"}
                 rel="noreferrer"
-                className="uppercase text-14/18 mt-7 hover:underline"
+                className="uppercase text-14/18 mt-7 hover:text-main"
               >
                 {item?.label}
               </a>
