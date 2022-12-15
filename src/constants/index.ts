@@ -7,7 +7,7 @@ export type CompanyTypes = {
   subName?: string;
   textColor: string;
   collections: Array<string>;
-  liveUrl?: string | undefined;
+  liveUrl: string;
   roles: string;
   description: string;
 };
@@ -60,6 +60,7 @@ export const companies: Array<CompanyTypes> = [
     fullName: "",
     roles: "DESIGNER",
     value: "ocd",
+    liveUrl: "https://issuu.com/scsaushi/docs/chuye__n__o__i_so___la__gi_",
     title:
       "Embrace leadership to innovate products in your business & Tet Holiday gifts for employees",
     textColor: "text-[#EE802D]",

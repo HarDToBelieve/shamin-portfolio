@@ -33,7 +33,7 @@ const WorkSection = (props: WorkSectionProps) => {
         </div>
 
         <div className="flex w-full mt-12">
-          <BaseSwiper>
+          <BaseSwiper theme={theme}>
             {workData?.collections?.map((url: string, index: number) => (
               <SwiperSlide style={{ height: "auto" }} key={index}>
                 <div className="w-full h-full relative">
@@ -46,31 +46,56 @@ const WorkSection = (props: WorkSectionProps) => {
 
         <div className="grid grid-cols-2 px-8 mt-16">
           <ul className="list-[square] list-inside">
-            <li className="text-18/24 uppercase">
-              <span className={clsx(workData?.textColor, "font-semibold")}>
-                Company:{" "}
-              </span>
-              <span className="">{workData?.fullName || "N/A"}</span>
-            </li>
+            {workData?.fullName ? (
+              <li className="text-18/24 uppercase">
+                <span className={clsx(workData?.textColor, "font-semibold")}>
+                  Company:{" "}
+                </span>
+                <span>{workData?.fullName || "N/A"}</span>
+              </li>
+            ) : (
+              <li className="text-18/24 uppercase">
+                <span className={clsx(workData?.textColor, "font-semibold")}>
+                  Project:{" "}
+                </span>
+                <a
+                  href={workData?.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  The Leadership and Change
+                </a>
+              </li>
+            )}
             <li className="text-18/24 uppercase">
               <span className={clsx(workData?.textColor, "font-semibold")}>
                 Role:{" "}
               </span>
-              <span className="">{workData?.roles || "N/A"}</span>
+              <span>{workData?.roles || "N/A"}</span>
             </li>
-            <li className="text-18/24 uppercase">
-              <span className={clsx(workData?.textColor, "font-semibold")}>
-                Live:{" "}
-              </span>
-              <a
-                href={workData?.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="underline"
-              >
-                HERE
-              </a>
-            </li>
+            {workData?.fullName ? (
+              <li className="text-18/24 uppercase">
+                <span className={clsx(workData?.textColor, "font-semibold")}>
+                  Live:{" "}
+                </span>
+                <a
+                  href={workData?.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline"
+                >
+                  HERE
+                </a>
+              </li>
+            ) : (
+              <li className="text-18/24 uppercase">
+                <span className={clsx(workData?.textColor, "font-semibold")}>
+                  Date:{" "}
+                </span>
+                <span>2020</span>
+              </li>
+            )}
           </ul>
 
           <div className="w-full whitespace-pre-line">

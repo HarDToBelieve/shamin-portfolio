@@ -1,6 +1,10 @@
 import { Autoplay, Lazy, Navigation, Pagination } from "swiper";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Swiper } from "swiper/react";
+import { PaginationOptions } from "swiper/types";
+import styles from "./swiper.module.scss";
 
 type BaseSwiperProps = {
   children: any;
@@ -8,6 +12,7 @@ type BaseSwiperProps = {
   showPagination?: boolean;
   handleSlideChange?: (data: any) => void;
   setSwiperRef?: any;
+  theme: "dark" | "light";
 };
 
 const BaseSwiper = (props: BaseSwiperProps) => {
@@ -17,10 +22,16 @@ const BaseSwiper = (props: BaseSwiperProps) => {
     showNavigation = false,
     handleSlideChange,
     setSwiperRef,
+    theme = "light",
   } = props;
-  const pagination = showPagination
+  const pagination: boolean | PaginationOptions = showPagination
     ? {
         clickable: true,
+        bulletClass:
+          styles.paginationBullet +
+          " " +
+          (theme === "light" ? styles.lightTheme : styles.darkTheme),
+        bulletActiveClass: styles.paginationBulletActive,
       }
     : false;
   return (
@@ -28,7 +39,7 @@ const BaseSwiper = (props: BaseSwiperProps) => {
       onSwiper={setSwiperRef}
       slidesPerView={1}
       autoplay={{
-        delay: 5000,
+        delay: 3000,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       }}
