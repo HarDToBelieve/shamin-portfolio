@@ -18,7 +18,12 @@ const WorkSection = (props: WorkSectionProps) => {
         "w-full flex",
       )}
     >
-      <div className="flex flex-col max-w-screen-main w-full mx-auto py-20">
+      <div
+        className={clsx(
+          "flex flex-col max-w-screen-2xl w-full mx-auto py-20",
+          "px-[210px]",
+        )}
+      >
         <p
           className={clsx(workData?.textColor, "m-0 uppercase font-bold")}
         >{`↓ Work File ${workData?.no.toString().padStart(2, "0")} ↓`}</p>

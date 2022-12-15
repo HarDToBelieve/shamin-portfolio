@@ -23,7 +23,7 @@ const footerRoutes = [
 
 const Footer = () => {
   return (
-    <div className="flex flex-col w-full pt-[120px] pb-[60px] pr-[110px] pl-[80px]">
+    <div className="flex flex-col w-full max-w-screen-2xl mx-auto pt-[120px] pb-[60px] pr-[110px] pl-[80px]">
       <div className="flex">
         <span className="text-20/28 font-bold">03/</span>
         <div className="flex flex-col ml-32">

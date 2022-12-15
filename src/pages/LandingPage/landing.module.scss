@@ -13,3 +13,8 @@
     transform: rotate(-360deg);
   }
 }
+
+.bgAbout {
+  background: url(/assets/bg-about-1.png) left top no-repeat,
+    url(/assets/bg-about-2.png) right bottom no-repeat;
+}

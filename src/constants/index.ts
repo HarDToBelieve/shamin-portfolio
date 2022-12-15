@@ -180,3 +180,48 @@ export const companies: Array<CompanyTypes> = [
     ],
   },
 ];
+
+export type AboutItemTypes = {
+  company: string;
+  url: string;
+  priod: string;
+  role: string;
+};
+export const abouts: Array<AboutItemTypes> = [
+  {
+    company: "Icetea Labs / GameFi.org",
+    url: "https://gamefi.org/",
+    priod: "10/2021 → today",
+    role: "Product Designer",
+  },
+  {
+    company: "VNDC Stablecoin ",
+    url: "https://goonus.io/",
+    priod: "01/2020 - 06/2021",
+    role: "Product Designer",
+  },
+  {
+    company: "CyStack Security",
+    url: "https://cystack.net/",
+    priod: "02/2018 - 09/2021",
+    role: "Full Stack Designer",
+  },
+  {
+    company: "VietnamCredit",
+    url: "https://vietnamcredit.com.vn/",
+    priod: "01/2018 - 06/2018",
+    role: "Full Stack Designer",
+  },
+  {
+    company: "Beau Creative",
+    url: "https://beau.vn/",
+    priod: "02/2017 - 08/2017",
+    role: "Web Designer",
+  },
+  {
+    company: "ADMIX Creative Design Studio",
+    url: "http://admixstudio.com/",
+    priod: "11/2015 - 12/2016",
+    role: "Brading & Web Designer",
+  },
+];
