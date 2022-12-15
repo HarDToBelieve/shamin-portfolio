@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { SwiperSlide } from "swiper/react";
-import { CompanyTypes } from "../../constants";
+import { CollectionTypes, CompanyTypes } from "../../constants";
 import BaseSwiper from "../Swiper";
 
 type WorkSectionProps = {
@@ -32,15 +32,26 @@ const WorkSection = (props: WorkSectionProps) => {
           </span>
         </div>
 
-        <div className="flex w-full mt-12">
+        <div className="flex w-full mt-12 relative">
           <BaseSwiper theme={theme}>
-            {workData?.collections?.map((url: string, index: number) => (
-              <SwiperSlide style={{ height: "auto" }} key={index}>
-                <div className="w-full h-full relative">
-                  <img src={url} alt="" />
-                </div>
-              </SwiperSlide>
-            ))}
+            {workData?.collections?.map(
+              (collection: CollectionTypes, index: number) => (
+                <SwiperSlide style={{ height: "auto" }} key={index}>
+                  <div className="w-full h-full relative">
+                    <img src={collection.imgSrc} alt="" />
+                    <div className="absolute top-8 right-8 z-10">
+                      <a
+                        href={collection.url}
+                        target={"_blank"}
+                        rel="noreferrer"
+                      >
+                        <img src="/images/icon-share.svg" alt="" />
+                      </a>
+                    </div>
+                  </div>
+                </SwiperSlide>
+              ),
+            )}
           </BaseSwiper>
         </div>
 
