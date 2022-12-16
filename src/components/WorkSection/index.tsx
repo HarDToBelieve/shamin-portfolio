@@ -20,15 +20,28 @@ const WorkSection = (props: WorkSectionProps) => {
     >
       <div
         className={clsx(
-          "flex flex-col max-w-screen-2xl w-full mx-auto py-20",
-          "px-[210px]",
+          "flex flex-col max-w-screen-2xl w-full mx-auto py-14 px-6",
+          "md:px-[60px] md:py-20",
+          "lg:px-[120px]",
+          "xl:px-[160px]",
+          "2xl:px-[210px]",
         )}
       >
         <p
-          className={clsx(workData?.textColor, "m-0 uppercase font-bold")}
+          className={clsx(
+            workData?.textColor,
+            "m-0 uppercase font-bold text-12/16 md:text-14/18",
+          )}
         >{`↓ Work File ${workData?.no.toString().padStart(2, "0")} ↓`}</p>
 
-        <div className="text-56/60 font-cas mt-4">
+        <div
+          className={clsx(
+            "text-32/40 font-cas mt-[10px]",
+            "md:text-40/52",
+            "lg:text-48/60",
+            "xl:text-56/60 md:mt-4",
+          )}
+        >
           <span className={clsx(workData?.textColor, "font-bold")}>
             {workData?.name}
           </span>
@@ -37,14 +50,19 @@ const WorkSection = (props: WorkSectionProps) => {
           </span>
         </div>
 
-        <div className="flex w-full mt-12 relative">
+        <div className="flex w-full mt-8 md:mt-12 relative">
           <BaseSwiper theme={theme}>
             {workData?.collections?.map(
               (collection: CollectionTypes, index: number) => (
                 <SwiperSlide style={{ height: "auto" }} key={index}>
                   <div className="w-full h-full relative">
                     <img src={collection.imgSrc} alt="" />
-                    <div className="absolute top-8 right-8 z-10">
+                    <div
+                      className={clsx(
+                        "absolute top-4 right-4 z-10 w-12 h-12",
+                        "md:top-8 md:right-8",
+                      )}
+                    >
                       <a
                         href={collection.url}
                         target={"_blank"}
@@ -60,7 +78,13 @@ const WorkSection = (props: WorkSectionProps) => {
           </BaseSwiper>
         </div>
 
-        <div className="grid grid-cols-2 px-8 mt-16">
+        <div
+          className={clsx(
+            "grid grid-cols-1 mt-6 gap-3",
+            "md:px-0",
+            "2md:px-8 md:mt-16 md:grid-cols-2",
+          )}
+        >
           <ul className="list-[square] list-inside">
             {workData?.fullName ? (
               <li className="text-18/24 uppercase">
