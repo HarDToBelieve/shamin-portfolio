@@ -17,4 +17,12 @@
 .bgAbout {
   background: url(/assets/bg-about-1.png) left top no-repeat,
     url(/assets/bg-about-2.png) right bottom no-repeat;
+
+  @media (max-width: theme("screens.md")) {
+    background: url(/assets/bg-about-xs-1.png) right top no-repeat,
+      url(/assets/bg-about-xs-2.png) right 70% no-repeat;
+  }
+  @media (max-width: theme("screens.lg")) {
+    background: url(/assets/bg-about-md-1.png) right top no-repeat;
+  }
 }
