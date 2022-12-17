@@ -1,6 +1,10 @@
 .bgMain {
-  background: url(/assets/bg-foreword.png) center center no-repeat;
-  background-size: auto 100%;
+  background: url(/assets/bg-foreword-xs.png) right bottom no-repeat;
+
+  @media (min-width: theme("screens.sm")) {
+    background: url(/assets/bg-foreword.png) center center no-repeat;
+    background-size: auto 100%;
+  }
 }
 
 .bgBtnScroll {
@@ -14,15 +18,85 @@
   }
 }
 
-.bgAbout {
-  background: url(/assets/bg-about-1.png) left top no-repeat,
-    url(/assets/bg-about-2.png) right bottom no-repeat;
-
-  @media (max-width: theme("screens.md")) {
-    background: url(/assets/bg-about-xs-1.png) right top no-repeat,
-      url(/assets/bg-about-xs-2.png) right 70% no-repeat;
+@keyframes slide-in {
+  100% {
+    transform: translateX(0%);
   }
-  @media (max-width: theme("screens.lg")) {
+}
+
+@-webkit-keyframes slide-in {
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}
+
+.slideIn {
+  animation: slide-in 0.5s forwards;
+  -webkit-animation: slide-in 0.5s forwards;
+}
+
+.slideOut {
+  animation: slide-out 0.5s forwards;
+  -webkit-animation: slide-out 0.5s forwards;
+}
+.popupHeader {
+  height: calc(100vh - 72px);
+  transform: translateX(100%);
+}
+
+.navigation {
+  position: absolute;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: bannerMove 12s linear infinite;
+  @media (min-width: theme("screens.2md")) {
+    animation: none;
+  }
+}
+.navItem {
+  & > div {
+    width: min(400px, 100vw);
+  }
+}
+@keyframes bannerMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+.bgAbout {
+  background: url(/assets/bg-about-xs-1.png) right top no-repeat,
+    url(/assets/bg-about-xs-2.png) right 70% no-repeat;
+
+  @media (min-width: theme("screens.sm")) {
     background: url(/assets/bg-about-md-1.png) right top no-repeat;
+  }
+  @media (min-width: theme("screens.lg")) {
+    background: url(/assets/bg-about-1.png) left top no-repeat,
+      url(/assets/bg-about-2.png) right bottom no-repeat;
   }
 }
