@@ -65,7 +65,7 @@ const Footer = () => {
           <span className="text-12/16 mt-3">
             Product Owner / Web & Mobile Designer
           </span>
-          <div className="flex space-x-12">
+          <div className="flex space-x-6 md:space-x-12">
             {footerRoutes.map((item: FooterRouteTypes, index: number) => (
               <a
                 key={index}

@@ -101,7 +101,7 @@ const ForeWord = () => {
 
   const renderFollowMe = () => {
     return (
-      <div className="flex flex-col min-w-[330px] mt-auto md:mt-0 sm:ml-auto">
+      <div className="flex flex-col w-full md:w-fit md:min-w-[330px] mt-auto md:mt-0 sm:ml-auto">
         <span className="text-22/32 font-semibold">Follow me</span>
         <span className="text-14/18 mt-2 max-w-[250px] text-mainWhite">
           I’m available on the following social media platform
