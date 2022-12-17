@@ -41,6 +41,7 @@ const ForeWord = () => {
     setOpenMenu((prevState) => !prevState);
   };
 
+  //#region RENDER
   const renderPopupHeader = () => {
     return (
       <div
@@ -76,11 +77,11 @@ const ForeWord = () => {
             Web & Mobile / UI & UX / Graphic Design
           </span>
         </div>
-        <div className="flex flex-col border-r-2 border-black px-10 justify-center">
+        <div className="flex flex-1 flex-col border-r-2 border-black px-10 justify-center">
           <span className="text-20/28 font-bold">Experience</span>
           <span className="text-14/18">2016 - 2022</span>
         </div>
-        <div className="flex flex-col px-10 justify-center border-r-2 border-black 2md:border-none">
+        <div className="flex flex-1 flex-col px-10 justify-center border-r-2 border-black lg:border-none">
           <span className="text-20/28 font-bold">Contact</span>
           <p className="text-14/18 m-0">
             Feel free to say{" "}
@@ -120,6 +121,8 @@ const ForeWord = () => {
       </div>
     );
   };
+
+  //#endregion RENDER
 
   return (
     <div className={clsx("flex w-full h-full min-h-screen", styles.bgMain)}>
@@ -201,15 +204,19 @@ const ForeWord = () => {
           <div
             className={clsx(
               "flex bg-main pt-[2px] text-black",
-              "2md:grid 2md:grid-cols-4",
               styles.navigation,
             )}
           >
-            <div className={clsx("flex", styles.navItem)}>
+            <div
+              className={clsx(
+                "flex w-full lg:w-screen xl:grid xl:grid-cols-4",
+                styles.navItem,
+              )}
+            >
               {renderNavigation()}
             </div>
 
-            <div className={clsx("flex 2md:hidden", styles.navItem)}>
+            <div className={clsx("flex lg:hidden", styles.navItem)}>
               {renderNavigation()}
             </div>
           </div>

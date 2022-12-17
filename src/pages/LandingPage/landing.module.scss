@@ -70,13 +70,16 @@
   overflow: hidden;
   white-space: nowrap;
   animation: bannerMove 12s linear infinite;
-  @media (min-width: theme("screens.2md")) {
+  @media (min-width: theme("screens.lg")) {
     animation: none;
   }
 }
 .navItem {
   & > div {
     width: min(400px, 100vw);
+    @media (min-width: theme("screens.lg")) {
+      width: auto;
+    }
   }
 }
 @keyframes bannerMove {
