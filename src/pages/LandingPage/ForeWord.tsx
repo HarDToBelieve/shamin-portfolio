@@ -41,19 +41,28 @@ const ForeWord = () => {
     setOpenMenu((prevState) => !prevState);
   };
 
+  const handleChangeRoute = (hash: FooterRouteTypes["to"]) => {
+    setOpenMenu(false);
+    window.location.hash = hash;
+  };
+
   //#region RENDER
   const renderPopupHeader = () => {
     return (
       <div
         className={clsx(
-          "fixed flex flex-col px-6 pb-[120px] w-full bg-black top-[72px] sm:hidden",
+          "fixed flex flex-col px-6 pb-[120px] w-full bg-black top-[72px] sm:hidden z-50",
           styles.popupHeader,
           openMenu ? styles.slideIn : styles.slideOut,
         )}
       >
         <div className="flex flex-col space-y-6 text-20/28 mt-20">
           {footerRoutes.map((item: FooterRouteTypes, index: number) => (
-            <div className="uppercase" key={index}>
+            <div
+              className="uppercase"
+              key={index}
+              onClick={() => handleChangeRoute(item.to)}
+            >
               {item.label}
             </div>
           ))}
@@ -107,8 +116,9 @@ const ForeWord = () => {
           I’m available on the following social media platform
         </span>
         <div className="flex text-16/20 border-b border-white pb-2 mt-5">
-          {socials.map((item: SocialItemTypes) => (
+          {socials.map((item: SocialItemTypes, index: number) => (
             <a
+              key={index + 10000}
               href={item.url}
               target="_blank"
               rel="noreferrer"

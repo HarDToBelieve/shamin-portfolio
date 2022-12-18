@@ -1,10 +1,11 @@
 import clsx from "clsx";
+import { forwardRef, LegacyRef } from "react";
 import { AboutItemTypes, abouts } from "../../constants";
 import styles from "./landing.module.scss";
 
-const About = () => {
+const About = forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
   return (
-    <div className={clsx("w-full max-w-screen-2xl mx-auto")}>
+    <div className={clsx("w-full max-w-screen-2xl mx-auto")} ref={ref}>
       <div
         className={clsx(
           "flex flex-col px-6 pt-[74px] pb-[50px] w-full",
@@ -167,6 +168,6 @@ const About = () => {
       </div>
     </div>
   );
-};
+});
 
 export default About;
