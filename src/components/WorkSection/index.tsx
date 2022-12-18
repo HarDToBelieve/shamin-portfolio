@@ -41,6 +41,7 @@ const WorkSection = (props: WorkSectionProps) => {
             "lg:text-48/60",
             "xl:text-56/60 md:mt-4",
           )}
+          data-aos="zoom-in"
         >
           <span className={clsx(workData?.textColor, "font-bold")}>
             {workData?.name}
@@ -91,7 +92,9 @@ const WorkSection = (props: WorkSectionProps) => {
                 <span className={clsx(workData?.textColor, "font-semibold")}>
                   Company:{" "}
                 </span>
-                <span>{workData?.fullName || "N/A"}</span>
+                <span data-aos="fade-up" data-aos-delay={0}>
+                  {workData?.fullName || "N/A"}
+                </span>
               </li>
             ) : (
               <li className="text-18/24 uppercase">
@@ -103,6 +106,7 @@ const WorkSection = (props: WorkSectionProps) => {
                   target="_blank"
                   rel="noreferrer"
                   className="underline"
+                  data-aos="fade-up"
                 >
                   The Leadership and Change
                 </a>
@@ -112,7 +116,9 @@ const WorkSection = (props: WorkSectionProps) => {
               <span className={clsx(workData?.textColor, "font-semibold")}>
                 Role:{" "}
               </span>
-              <span>{workData?.roles || "N/A"}</span>
+              <span data-aos="fade-up" data-aos-delay={100}>
+                {workData?.roles || "N/A"}
+              </span>
             </li>
             {workData?.fullName ? (
               <li className="text-18/24 uppercase">
@@ -124,6 +130,8 @@ const WorkSection = (props: WorkSectionProps) => {
                   target="_blank"
                   rel="noreferrer"
                   className="underline"
+                  data-aos="fade-up"
+                  data-aos-delay={200}
                 >
                   HERE
                 </a>
@@ -133,12 +141,14 @@ const WorkSection = (props: WorkSectionProps) => {
                 <span className={clsx(workData?.textColor, "font-semibold")}>
                   Date:{" "}
                 </span>
-                <span>2020</span>
+                <span data-aos="fade-up" data-aos-delay={200}>
+                  2020
+                </span>
               </li>
             )}
           </ul>
 
-          <div className="w-full whitespace-pre-line">
+          <div className="w-full whitespace-pre-line" data-aos="fade-up">
             {workData?.description}
           </div>
         </div>

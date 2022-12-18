@@ -164,8 +164,8 @@ const ForeWord = () => {
               "lg:text-120/120",
             )}
           >
-            <span>Product</span>
-            <span>Designer</span>
+            <span data-aos="fade-up">Product</span>
+            <span data-aos="fade-up">Designer</span>
           </div>
 
           <div

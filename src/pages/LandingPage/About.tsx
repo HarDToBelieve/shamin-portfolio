@@ -35,7 +35,20 @@ const About = () => {
               <p className="m-0 max-w-[260px] italic">
                 A journey of curiosity and explorations
               </p>
-              <p className="whitespace-pre-line max-w-[480px]">{`I'm a creative designer with years of experience in building products and appealing website/mobile app experiences. I've partnered with startups of all sizes and various stages to create some truly unique products.\n\nEach project is an opportuinity to learn new concepts across multiple domains including digital arts, multi-media and physics.`}</p>
+              <div className="flex flex-col max-w-[480px]">
+                <p className="whitespace-pre-line" data-aos="fade-up">
+                  I'm a creative designer with years of experience in building
+                  products and appealing website/mobile app experiences. I've
+                  partnered with startups of all sizes and various stages to
+                  create some truly unique products.
+                  {`\n\n`}
+                </p>
+                <p data-aos="fade-up" data-aos-delay={100}>
+                  Each project is an opportuinity to learn new concepts across
+                  multiple domains including digital arts, multi-media and
+                  physics.
+                </p>
+              </div>
             </div>
 
             <div
@@ -61,12 +74,25 @@ const About = () => {
                       href={item.url}
                       target="_blank"
                       rel="noreferrer"
+                      data-aos="fade-up"
                       className="text-18/32 w-fit 2md:text-26/32 font-cas font-bold hover:text-main"
                     >
                       {item.company}
                     </a>
-                    <span className="mt-3">{item.priod}</span>
-                    <span className="mt-1">{item.role}</span>
+                    <span
+                      className="mt-3"
+                      data-aos="fade-up"
+                      data-aos-delay={100}
+                    >
+                      {item.priod}
+                    </span>
+                    <span
+                      className="mt-1"
+                      data-aos="fade-up"
+                      data-aos-delay={100}
+                    >
+                      {item.role}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -88,12 +114,23 @@ const About = () => {
                     href="https://www.arena-multimedia.vn/"
                     target="_blank"
                     rel="noreferrer"
+                    data-aos="fade-up"
                     className="text-18/32 w-fit 2md:text-26/32 font-cas font-bold hover:text-main"
                   >
                     Arena Multimedia
                   </a>
-                  <span className="mt-3">2014 - 2017</span>
-                  <span className="mt-1 lg:max-w-[300px]">
+                  <span
+                    className="mt-3"
+                    data-aos="fade-up"
+                    data-aos-delay={100}
+                  >
+                    2014 - 2017
+                  </span>
+                  <span
+                    className="mt-1 lg:max-w-[300px]"
+                    data-aos="fade-up"
+                    data-aos-delay={100}
+                  >
                     Advanced Diplopma in Multimedia (ADIM)
                   </span>
                 </div>
@@ -119,6 +156,7 @@ const About = () => {
                 "mt-6 italic text-16/24 max-w-[780px]",
                 "2md:mt-10 2md:text-22/32",
               )}
+              data-aos="fade-up"
             >
               I've partnered with startups of all sizes and various stages to
               create some truly unique products. Here are a few that I feel were
