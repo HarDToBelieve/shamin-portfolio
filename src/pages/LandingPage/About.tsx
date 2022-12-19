@@ -141,7 +141,7 @@ const About = forwardRef((props, ref: LegacyRef<HTMLDivElement>) => {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row mt-[100px] 2md:mt-[160px]">
+        <div className="flex flex-col md:flex-row mt-10 2md:mt-[160px]">
           <span className="text-20/28 font-bold">02/</span>
           <div className="flex flex-col md:ml-16 lg:ml-20 xl:ml-32 w-full">
             <p
