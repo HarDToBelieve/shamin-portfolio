@@ -222,6 +222,6 @@ export const abouts: Array<AboutItemTypes> = [
     company: "ADMIX Creative Design Studio",
     url: "http://admixstudio.com/",
     priod: "11/2015 - 12/2016",
-    role: "Brading & Web Designer",
+    role: "Branding & Web Designer",
   },
 ];
