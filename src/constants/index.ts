@@ -124,9 +124,9 @@ export const companies: Array<CompanyTypes> = [
   {
     no: 4,
     name: "GameFi.Org",
-    fullName: "Icetea Labs - Gamefi.org Team",
+    fullName: "Icetea Labs - Gamefi.org",
     liveUrl: "https://gamefi.org/",
-    roles: "PO, PRODUCT DESIGN",
+    roles: "Project Owner, PRODUCT DESIGN",
     value: "gamefi",
     title:
       "Integrates the top popular networks to bring users the best experience and enable diverse projects listed on its platform. ",
