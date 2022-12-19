@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import React, { useState } from "react";
+import { HTMLAttributeAnchorTarget, useState } from "react";
 import { SEND_GMAIL_URL } from "../../utils";
 import { footerRoutes, FooterRouteTypes } from "./Footer";
 import styles from "./landing.module.scss";
@@ -41,9 +41,13 @@ const ForeWord = () => {
     setOpenMenu((prevState) => !prevState);
   };
 
-  const handleChangeRoute = (hash: FooterRouteTypes["to"]) => {
+  const handleChangeRoute = (
+    hash: FooterRouteTypes["to"],
+    target?: HTMLAttributeAnchorTarget,
+  ) => {
     setOpenMenu(false);
-    window.location.hash = hash;
+    if (!target) window.location.hash = hash;
+    else window.open(hash, target);
   };
 
   //#region RENDER
@@ -61,7 +65,7 @@ const ForeWord = () => {
             <div
               className="uppercase"
               key={index}
-              onClick={() => handleChangeRoute(item.to)}
+              onClick={() => handleChangeRoute(item.to, item.target)}
             >
               {item.label}
             </div>
