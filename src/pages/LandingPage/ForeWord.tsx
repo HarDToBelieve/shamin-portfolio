@@ -1,6 +1,5 @@
 import clsx from "clsx";
 import { HTMLAttributeAnchorTarget, useState } from "react";
-import { SEND_GMAIL_URL } from "../../utils";
 import { footerRoutes, FooterRouteTypes } from "./Footer";
 import styles from "./landing.module.scss";
 
