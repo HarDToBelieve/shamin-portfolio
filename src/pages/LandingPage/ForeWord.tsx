@@ -96,17 +96,7 @@ const ForeWord = () => {
         </div>
         <div className="flex flex-1 flex-col px-10 justify-center border-r-2 border-black lg:border-none">
           <span className="text-20/28 font-bold">Contact</span>
-          <p className="text-14/18 m-0">
-            Feel free to say{" "}
-            <a
-              href={SEND_GMAIL_URL}
-              target={"_blank"}
-              rel="noreferrer"
-              className="text-[#001AFF] font-semibold"
-            >
-              /hello.
-            </a>
-          </p>
+          <p className="text-14/18 m-0">+84 984 470 024</p>
         </div>
       </>
     );
